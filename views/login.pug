@@ -1,0 +1,28 @@
+include Struture.pug
+
+    - var register_message = status
+    if register_message
+            div(class=`alert alert-${btn_type} alert-dismissible fade show` role='alert')
+                strong=`${message}`
+                button(type='button' class='close' data-dismiss='alert' aria-label='Close')
+                    span(aria-hidden="true") &times;
+
+    <form action="login" method="post">
+        <div class="container">
+            <div class="row card card-body border border-info m-3">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="password" name="pass" id="pass" placeholder="password" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                   <button type="submit" class="btn btn-outline-warning">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </form>
